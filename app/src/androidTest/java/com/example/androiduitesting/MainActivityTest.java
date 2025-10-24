@@ -27,7 +27,7 @@ public class MainActivityTest {
     public ActivityScenarioRule<MainActivity> scenario =
             new ActivityScenarioRule<>(MainActivity.class);
 
-    // ✅ Test 1: Add a city and verify display
+    //  Test 1: Add a city and verify display
     @Test
     public void testAddCity() {
         onView(withId(R.id.button_add)).perform(click());
@@ -36,7 +36,7 @@ public class MainActivityTest {
         onView(withText("Edmonton")).check(matches(isDisplayed()));
     }
 
-    // ✅ Test 2: Clear all cities
+    //  Test 2: Clear all cities
     @Test
     public void testClearCity() {
         onView(withId(R.id.button_add)).perform(click());
@@ -53,7 +53,7 @@ public class MainActivityTest {
         onView(withText("Vancouver")).check(doesNotExist());
     }
 
-    // ✅ Test 3: Check first position in ListView
+    //  Test 3: Check first position in ListView
     @Test
     public void testListView() {
         onView(withId(R.id.button_add)).perform(click());
