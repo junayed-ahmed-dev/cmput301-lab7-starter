@@ -1,5 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Your chosen color theme -->
+    <color name="primary">#008577</color>
+    <color name="primaryDark">#00574B</color>
+    <color name="accent">#00C29D</color>
 </resources>
