@@ -15,11 +15,12 @@ public class ShowActivity extends AppCompatActivity {
         TextView cityNameText = findViewById(R.id.show_city_name);
         Button backButton = findViewById(R.id.back_button);
 
-        // Get the city name from intent
-        String cityName = getIntent().getStringExtra("CITY_NAME");
-        cityNameText.setText(cityName);
+        // Get the city name safely
+        String selectedCity = getIntent().getStringExtra("CITY_NAME");
+        if (selectedCity != null) {
+            cityNameText.setText(selectedCity);
+        }
 
-        // Back button to return to MainActivity
         backButton.setOnClickListener(v -> finish());
     }
 }
